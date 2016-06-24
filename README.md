@@ -31,11 +31,12 @@ include some other transform modules you'll probably never use.
 
 ## Internal presets and plugins
 
-* babel-preset-react
-* babel-plugin-syntax-class-properties
-* babel-plugin-transform-class-properties
-* babel-plugin-transform-object-rest-spread
-* babel-plugin-transform-decorators-legacy
+* [babel-preset-react](https://github.com/babel/babel/tree/master/packages/babel-preset-react)
+* [babel-plugin-syntax-class-properties](https://github.com/babel/babel/tree/master/packages/babel-plugin-syntax-class-properties)
+* [babel-plugin-transform-class-properties](https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-class-properties)
+* [babel-plugin-syntax-object-rest-spread](https://github.com/babel/babel/tree/master/packages/babel-plugin-syntax-object-rest-spread)
+* [babel-plugin-transform-object-rest-spread](https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-object-rest-spread)
+* [babel-plugin-transform-decorators-legacy](https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy)
 
 ## boilerplate
 
