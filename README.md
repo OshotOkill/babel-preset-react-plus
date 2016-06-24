@@ -79,6 +79,7 @@ class App extends React.Component {
 ```
 
 > object-spread-rest
+
 ```object-spread-rest
 //Sometimes useful in redux
 
