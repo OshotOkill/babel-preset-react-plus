@@ -38,12 +38,15 @@ include some other transform modules you'll probably never use.
 * [babel-plugin-transform-object-rest-spread](https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-object-rest-spread)
 * [babel-plugin-transform-decorators-legacy](https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy)
 
-## boilerplate
+## Boilerplate
 
 > Decorator
 
 **react-redux**
 ```react-redux
+import React { Component } from 'react';
+import { connect } from 'react-redux';
+
 @connect(
   state => state.todos
   actionCreators
@@ -57,6 +60,9 @@ export default App;
 
 **react-router**
 ```react-router
+import React { Component } from 'react';
+import { withRouter } from 'react-router';
+
 @withRouter
 class App extends React.Component {
   ...
@@ -77,6 +83,7 @@ class App extends React.Component {
   ...
 }
 
+export default App;
 ```
 
 > object-spread-rest
