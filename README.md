@@ -24,9 +24,9 @@ This preset includes the following ECMAScript propersals:
 * [`Rest/Spread Properties`](https://github.com/sebmarkbage/ecmascript-rest-spread) 
 
 Since above three are becoming the most frequently used propersals in react apps I decide to intergrate them
-into one preset which also includes the basic `babel-preset-react` so that We no longer
-need to download them separately and enable these propersals by downloading corresponding syntax-parsing plugins manually.
-Except this you can also download babel-preset-stage-* together with those syntax-parsing plugins but it is unconvenient and
+into one preset which also includes the basic `babel-preset-react` so that we no longer
+need to download them separately and enable these propersals by downloading corresponding **syntax-parsing plugins** manually.
+Except this you can also download `babel-preset-stage-*` together with those syntax-parsing plugins but it is unconvenient and
 include some other transform modules you'll probably never use.
 
 ## Internal presets and plugins
@@ -40,18 +40,18 @@ include some other transform modules you'll probably never use.
 
 ## Boilerplate
 
-> Decorator
+> decorators
 
 **react-redux**
 ```react-redux
-import React { Component } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 @connect(
   state => state.todos
   actionCreators
 )
-class App extends React.Component {
+class App extends Component {
   ...
 }
 
@@ -60,11 +60,11 @@ export default App;
 
 **react-router**
 ```react-router
-import React { Component } from 'react';
+import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 
 @withRouter
-class App extends React.Component {
+class App extends Component {
   ...
 }
 
@@ -90,7 +90,7 @@ export default App;
 
 ```object-spread-rest
 //Sometimes useful in redux
-
+//reducer
 const users = (state = {}, action) => {
   switch(action.type) {
     case "ADD_USER": {
