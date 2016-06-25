@@ -48,7 +48,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 @connect(
-  state => state.todos
+  state => ({ todos: state.todos }),
   actionCreators
 )
 class App extends Component {
@@ -74,7 +74,9 @@ export default App;
 > class-properties
 
 ```class-properties
-class App extends React.Component {
+import React, { Component } from 'react';
+
+class App extends Component {
   state = {}
 
   handleClick = (e) => {
@@ -89,8 +91,9 @@ export default App;
 > object-spread-rest
 
 ```object-spread-rest
-//Sometimes useful in redux
-//reducer
+// Sometimes useful in redux
+// reducer
+
 const users = (state = {}, action) => {
   switch(action.type) {
     case "ADD_USER": {
