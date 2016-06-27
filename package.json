@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-react-plus",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Develop react-apps with some useful unstage propersal based on babel-preset-es2015/react",
   "author": {
     "name": "Norn Chronos",
@@ -13,7 +13,7 @@
     }
   ],
   "dependencies": {
-    "babel-preset-react": "^6.5.0",
+    "babel-preset-react": "^6.11.0",
     "babel-plugin-syntax-class-properties": "^6.8.0",
     "babel-plugin-transform-class-properties": "^6.10.2",
     "babel-plugin-syntax-object-rest-spread": "^6.8.0",
