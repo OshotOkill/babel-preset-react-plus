@@ -27,7 +27,7 @@ Since above three are becoming the most frequently used propersals in react apps
 into one preset which also includes the basic `babel-preset-react` so that we no longer
 need to download them separately and enable these propersals by downloading corresponding **syntax-parsing plugins** manually.
 Except this you can also download `babel-preset-stage-*` together with those syntax-parsing plugins but it is unconvenient and
-include some other transform modules you'll probably never use.
+includes some other transform modules you'll probably never use.
 
 ## Internal presets and plugins
 
