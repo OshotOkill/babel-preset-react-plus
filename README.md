@@ -3,7 +3,10 @@
 > Babel preset for react development with some additional ECMAScript propersal based on babel-preset-react.
 
 ```NOTE
-NOTE: This preset requires Babel v6+.
+NOTE:
+
+- Requires Babel v6+.
+- babel-preset-es2015/es2016 is excluded. You need to download them manually.
 ```
 ## Install
 
@@ -114,7 +117,7 @@ const users = (state = {}, action) => {
 > export-extensions
 
 ```export-extension
-// It's a common pattern that Separating React components into corresponding files 
+// It's a common pattern which separates React components into corresponding files 
 // And we need to create a index.js to export all imported components
 
 // Before
