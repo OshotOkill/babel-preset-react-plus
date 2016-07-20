@@ -12,10 +12,6 @@ NOTE:
 
 ```sh
 $ npm install --save-dev babel-preset-react-plus
-
-// or
-
-$ npm i -D babel-preset-react-plus
 ```
 
 ## Introdcution
@@ -78,6 +74,22 @@ class App extends Component {
 export default App;
 ```
 
+**core-decorators**
+```core-decorators
+import React, { Component } from 'react';
+import { autobind } from 'core-decorators';
+
+@autobind
+class App extends Component {
+  // You don't have to set this.handleClick.bind(this) in
+  // constructor or the place where it's being called
+  handleClick() {...}
+  ...
+}
+
+export default App;
+```
+
 > class-properties
 
 ```class-properties
@@ -124,15 +136,21 @@ const users = (state = {}, action) => {
 import A from './a';
 import B from './b';
 import C from './c';
-import { doSomeThing } from './D';
+import { foo, bar } from './utils';
 
-export { A, B, C, doSomeThing };
+export { A, B, C, foo, bar };
+//or
+export { default as A } from './a';
+export { default as B } from './b';
+export { default as C } from './c';
+export { foo, bar } from './utils';
 
 // After
 export A from './a';
 export B from './b';
 export C from './c';
-export { doSomeThing } from './D';
+export * as utils from './utils';
+
 ```
 
 ## Usage
