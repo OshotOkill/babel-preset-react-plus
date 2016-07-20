@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-react-plus",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Babel preset for react development with some additional ECMAScript propersal based on babel-preset-react",
   "author": {
     "name": "Norn Chronos",
@@ -13,7 +13,7 @@
     }
   ],
   "dependencies": {
-    "babel-preset-react": "^6.11.0",
+    "babel-preset-react": "^6.11.1",
     "babel-plugin-syntax-class-properties": "^6.8.0",
     "babel-plugin-transform-class-properties": "^6.10.2",
     "babel-plugin-syntax-object-rest-spread": "^6.8.0",
