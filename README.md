@@ -1,13 +1,20 @@
 # babel-preset-react-plus
 
+[![npm version](https://img.shields.io/npm/v/babel-preset-react-plus.svg?style=flat-square)](https://www.npmjs.com/package/babel-preset-react-plus)
+[![npm downloads](https://img.shields.io/npm/dm/babel-preset-react-plus.svg?style=flat-square)](https://www.npmjs.com/package/babel-preset-react-plus)
+[![dependencies](https://img.shields.io/david/strongloop/express.svg?maxAge=2592000?style=flat-square)](https://www.npmjs.com/package/babel-preset-react-plus)
+
+<br />
+
 > Babel preset for react development with some additional ECMAScript propersal based on babel-preset-react.
 
 ```NOTE
 NOTE:
 
 - Requires Babel v6+.
-- babel-preset-es2015/es2016 is excluded. You need to download them manually.
+- babel-preset-es2015/es2016 are excluded. You need to download them manually.
 ```
+
 ## Install
 
 ```sh
@@ -23,25 +30,30 @@ This preset includes the following ECMAScript propersals:
 * [`Rest/Spread Properties`](https://github.com/sebmarkbage/ecmascript-rest-spread)
 * [`export * as ns from "mod";  statements`](https://github.com/leebyron/ecmascript-export-ns-from)
 * [`export v from "mod";  statements`](https://github.com/leebyron/ecmascript-export-default-from)
+* [`Async Functions`](https://github.com/tc39/ecmascript-asyncawait)
 
-Since above five are becoming the most frequently used propersals in react apps I decide to intergrate them
-into one preset which also includes the basic `babel-preset-react` so that we no longer
+Since above six are becoming the most frequently used propersals in react apps and async functions eventually moved into 
+ES8 (ES2017) I decide to intergrate them into one preset which also includes the basic `babel-preset-react`. ~~so that we no longer
 need to download them separately and enable these propersals by downloading corresponding **syntax-parsing plugins** manually.
 Except this you can also download `babel-preset-stage-*` together with those syntax-parsing plugins but it is unconvenient and
-includes some other transform modules you'll probably never use.
+includes some other transform modules you'll probably never use~~. Recently babel finally integrated their transform plugins with 
+the corresponding syntax-parsing plugins thus we no longer need to download them separately. However I still think this preset useful
+since the stage of propersals always change frequently which means it's hard to decide which preset-stage plugin should choose.
 
 ## Internal presets and plugins
 
 * [babel-preset-react](https://github.com/babel/babel/tree/master/packages/babel-preset-react)
-* [babel-plugin-syntax-class-properties](https://github.com/babel/babel/tree/master/packages/babel-plugin-syntax-class-properties)
 * [babel-plugin-transform-class-properties](https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-class-properties)
-* [babel-plugin-syntax-object-rest-spread](https://github.com/babel/babel/tree/master/packages/babel-plugin-syntax-object-rest-spread)
 * [babel-plugin-transform-object-rest-spread](https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-object-rest-spread)
 * [babel-plugin-transform-decorators-legacy](https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy)
-* [babel-plugin-syntax-export-extensions](https://github.com/babel/babel/tree/master/packages/babel-plugin-syntax-export-extensions)
 * [babel-plugin-transform-export-extensions](https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-export-extensions)
+* [babel-plugin-transform-async-to-generator](https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-async-to-generator)
+
+<br />
 
 ## Boilerplate
+
+<br />
 
 > decorators
 
@@ -90,6 +102,8 @@ class App extends Component {
 export default App;
 ```
 
+<br />
+
 > class-properties
 
 ```class-properties
@@ -106,6 +120,8 @@ class App extends Component {
 
 export default App;
 ```
+
+<br />
 
 > object-spread-rest
 
@@ -125,6 +141,7 @@ const users = (state = {}, action) => {
   }
 }
 ```
+<br />
 
 > export-extensions
 
@@ -152,6 +169,21 @@ export C from './c';
 export * as utils from './utils';
 
 ```
+
+<br />
+
+> async-functions
+
+```async-functions
+
+(async function() {
+  await loadStory();
+  console.log("Yey, story successfully loaded!");
+}());
+
+```
+
+<br />
 
 ## Usage
 
