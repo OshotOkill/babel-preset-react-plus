@@ -12,7 +12,8 @@
 NOTE:
 
 - Requires Babel v6+.
-- babel-preset-es2015/es2016 are excluded. You need to download them manually.
+- babel-preset-es2015/es2016/es2017/latest are excluded. You need to download them manually.
+- async/await was offically moved into babel-preset-es2017.
 ```
 
 ## Install
@@ -30,10 +31,8 @@ This preset includes the following ECMAScript propersals:
 * [`Rest/Spread Properties`](https://github.com/sebmarkbage/ecmascript-rest-spread)
 * [`export * as ns from "mod";  statements`](https://github.com/leebyron/ecmascript-export-ns-from)
 * [`export v from "mod";  statements`](https://github.com/leebyron/ecmascript-export-default-from)
-* [`Async Functions`](https://github.com/tc39/ecmascript-asyncawait)
 
-Since above six are becoming the most frequently used propersals in react apps and async functions eventually moved into 
-ES8 (ES2017) I decide to intergrate them into one preset which also includes the basic `babel-preset-react`. ~~so that we no longer
+Since above five are becoming the most frequently used propersals in react apps I decide to intergrate them into one preset which also includes the basic `babel-preset-react`. ~~so that we no longer
 need to download them separately and enable these propersals by downloading corresponding **syntax-parsing plugins** manually.
 Except this you can also download `babel-preset-stage-*` together with those syntax-parsing plugins but it is unconvenient and
 includes some other transform modules you'll probably never use~~. Recently babel finally integrated their transform plugins with 
@@ -47,7 +46,6 @@ since the stage of propersals always change frequently which means it's hard to 
 * [babel-plugin-transform-object-rest-spread](https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-object-rest-spread)
 * [babel-plugin-transform-decorators-legacy](https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy)
 * [babel-plugin-transform-export-extensions](https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-export-extensions)
-* [babel-plugin-transform-async-to-generator](https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-async-to-generator)
 
 <br />
 
@@ -167,19 +165,6 @@ export A from './a';
 export B from './b';
 export C from './c';
 export * as utils from './utils';
-
-```
-
-<br />
-
-> async-functions
-
-```async-functions
-
-(async function() {
-  await loadStory();
-  console.log("Yey, story successfully loaded!");
-}());
 
 ```
 
